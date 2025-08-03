@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #0e0e0e;
+  color: #c2f0c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #000 100%);
+}
+
+/* Container */
+.container {
+  background-color: #111;
+  border: 2px solid #2affaa;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(42, 255, 170, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+/* Title */
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+  color: #2affaa;
+  text-shadow: 0 0 3px #2affaa;
+}
+
+/* Input Field */
+input[type="number"] {
+  padding: 0.75rem 1rem;
+  width: 100%;
+  font-size: 1rem;
+  border: 2px solid #2affaa;
+  border-radius: 4px;
+  background-color: #000;
+  color: #2affaa;
+  margin-bottom: 1rem;
+  appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #aaffcc;
+  box-shadow: 0 0 5px #aaffcc;
+}
+
+/* Button */
+button {
+  padding: 0.7rem 1.2rem;
+  background-color: #2affaa;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-color: #1dd698;
+  box-shadow: 0 0 8px #2affaa;
+}
+
+/* Output Display */
+#output {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #0e0e0e;
+  border: 1px dashed #2affaa;
+  border-radius: 6px;
+  color: #aaffcc;
+  white-space: pre-wrap;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Query: Responsive Layout */
+@media (max-width: 480px) {
+  .container {
+    padding: 1.25rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  #output {
+    font-size: 1.1rem;
+  }
+}
